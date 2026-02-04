@@ -1,0 +1,194 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Layout */
+.app {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #1a1a1a;
+  font-size: 22px;
+}
+
+/* ---------------------------------------------------------------------------
+   Search
+   --------------------------------------------------------------------------- */
+.search-bar {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.search-bar input:focus {
+  border-color: #4a90d9;
+  box-shadow: 0 0 0 2px rgba(74, 144, 217, 0.2);
+}
+
+/* Dropdown list */
+.results-dropdown {
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  z-index: 10;
+}
+
+.results-dropdown li {
+  padding: 10px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.results-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.results-dropdown li:hover {
+  background: #f0f7ff;
+}
+
+.search-status {
+  font-size: 13px;
+  color: #888;
+  padding: 6px 0;
+}
+
+.search-error {
+  font-size: 13px;
+  color: #d32f2f;
+  padding: 6px 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Watchlist controls
+   --------------------------------------------------------------------------- */
+.limit-warning {
+  font-size: 13px;
+  color: #f57c00;
+  margin-bottom: 8px;
+}
+
+.refresh-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  background: #4a90d9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.refresh-btn:hover {
+  background: #357abd;
+}
+
+/* ---------------------------------------------------------------------------
+   Stock cards
+   --------------------------------------------------------------------------- */
+.watchlist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stock-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.card-header h3 {
+  font-size: 18px;
+  color: #1a1a1a;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #999;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+.remove-btn:hover {
+  color: #d32f2f;
+}
+
+/* Card states */
+.loading {
+  color: #888;
+  font-size: 14px;
+}
+
+.error {
+  color: #d32f2f;
+  font-size: 14px;
+}
+
+/* Card data */
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.change {
+  font-size: 15px;
+  margin-top: 2px;
+}
+
+.change.positive {
+  color: #2e7d32;
+}
+
+.change.negative {
+  color: #d32f2f;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #999;
+  margin-top: 6px;
+}
